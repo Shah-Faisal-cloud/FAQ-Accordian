@@ -1,0 +1,102 @@
+:root{
+    /* Defining variables for colors */
+    --white: hsl(0, 0%, 100%);
+    --light-pink: hsl(275, 100%, 97%);
+    --light-purple: hsl(292, 16%, 49%);
+    --medium-purple: hsl(293, 69%, 54%);
+    --dark-purple: hsl(292, 42%, 14%);
+
+    /* Defining variables for font-weights */
+    --normal: 400;
+    --semi-bold: 600;
+    --bold: 700;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+.upper-part{
+    height: 40vh;
+}
+.upper-part img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.lower-part{
+    min-height: 60vh;
+    background-color: var(--light-pink);
+    display: grid;
+    place-items: start center;
+}
+.card{
+    width: 550px;
+    min-height: 310px;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    margin-top: -8rem;
+}
+header{
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+header img{
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+}
+header h2{
+    font-size: 3rem;
+    font-weight: var(--bold);
+}
+h2, h4{
+    color: var(--dark-purple);
+}
+.faq{
+    margin-top: 2rem;
+}
+.heading{
+    display: flex;
+    justify-content: space-between;
+}
+.heading:hover{
+    cursor: pointer;
+}
+h4{
+    font-weight: var(--semi-bold);
+}
+h4:hover{
+    color: var(--medium-purple);
+}
+p{
+    color: var(--light-purple);
+    margin-top: 1rem;
+    display: none;
+}
+.plus-icon, .minus-icon{
+    height: 25px;
+    width: 25px;
+    object-fit: cover;
+}
+.minus-icon{
+    display: none;
+}
+.hidden{
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .card{
+        width: 350px; 
+        margin-bottom: 5rem;
+    }
+    .heading{
+        column-gap: 3rem;
+    }
+}
