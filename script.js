@@ -1,14 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    let headings = document.querySelectorAll('.heading');
-    let paragraphs = document.querySelectorAll('p');
-    let plusIcon = document.querySelectorAll('.plus-icon');
-    let minusIcon = document.querySelectorAll('.minus-icon');
+    const headings = document.querySelectorAll('.heading');
+    const paragraphs = document.querySelectorAll('p');
+    const icon = document.querySelectorAll('.icon');
 
     headings.forEach((heading, index) => {
 
         // Defining the paragraph associated with that heading
-        let para = heading.nextElementSibling;
+        const para = heading.nextElementSibling;
 
 
         heading.addEventListener('click', () => {
@@ -17,8 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             paragraphs.forEach((para, i) => {
                 if (i !== index) { 
                     para.style.display = 'none';
-                    plusIcon[i].style.display = 'block';
-                    minusIcon[i].style.display = 'none';
+                    icon[i].src = 'assets/images/icon-plus.svg';
                 };
             });
 
@@ -26,12 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if(computedStyle.display === 'none') {
                 para.style.display = 'block';
-                plusIcon[index].style.display = 'none';
-                minusIcon[index].style.display = 'block';
+                icon[index].src = 'assets/images/icon-minus.svg';
             } else {
                 para.style.display = 'none';
-                plusIcon[index].style.display = 'block';
-                minusIcon[index].style.display = 'none';
+                icon[index].src = 'assets/images/icon-plus.svg';
             };
         });
     });
