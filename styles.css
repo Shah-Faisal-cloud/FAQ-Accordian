@@ -71,6 +71,7 @@ h1, h4{
 }
 h4{
     font-weight: var(--semi-bold);
+    user-select: none;
 }
 h4:hover{
     color: var(--medium-purple);
@@ -79,6 +80,7 @@ p{
     color: var(--light-purple);
     margin-top: 1rem;
     display: none;
+    user-select: none;
 }
 .icon{
     height: 25px;
